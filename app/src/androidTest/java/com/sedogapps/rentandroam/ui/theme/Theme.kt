@@ -9,31 +9,28 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-// Light Mode için renkler
-val lightColors = lightColorScheme(
-    primary = Color(0xFF6200EE),
-    secondary = Color(0xFF03DAC6),
-    background = Color.White, // Light modda arka plan beyaz olacak
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black
+private val DarkColorScheme = darkColorScheme(
+    primary = Purple80,
+    secondary = PurpleGrey80,
+    tertiary = Pink80
 )
 
-// Dark Mode için renkler
-val darkColors = darkColorScheme(
-    primary = Color(0xFFBB86FC),
-    secondary = Color(0xFF03DAC6),
-    background = Color.Black, // Dark modda arka plan siyah olacak
-    surface = Color.Black,
-    onPrimary = Color.Black,
+private val LightColorScheme = lightColorScheme(
+    primary = Purple40,
+    secondary = PurpleGrey40,
+    tertiary = Pink40
+
+    /* Other default colors to override
+    background = Color(0xFFFFFBFE),
+    surface = Color(0xFFFFFBFE),
+    onPrimary = Color.White,
     onSecondary = Color.White,
-    onBackground = Color.White,
-    onSurface = Color.White
+    onTertiary = Color.White,
+    onBackground = Color(0xFF1C1B1F),
+    onSurface = Color(0xFF1C1B1F),
+    */
 )
 
 @Composable
@@ -49,8 +46,8 @@ fun RentAndRoamTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> darkColors
-        else -> lightColors
+        darkTheme -> DarkColorScheme
+        else -> LightColorScheme
     }
 
     MaterialTheme(
