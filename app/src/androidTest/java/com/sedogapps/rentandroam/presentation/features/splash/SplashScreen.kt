@@ -1,4 +1,4 @@
-package com.sedogapps.rentandroam.presentation.features
+package com.sedogapps.rentandroam.presentation.features.splash
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Column
@@ -17,7 +17,6 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.unit.dp
 import org.junit.Rule
 import org.junit.Test
-import com.sedogapps.rentandroam.R
 
 class SplashScreenTest {
 
@@ -32,7 +31,7 @@ class SplashScreenTest {
 
         // Görsel kontrol: İlk resmin varlığını doğrula
         composeTestRule
-            .onNodeWithContentDescription("Example PNG Image")
+            .onNodeWithContentDescription("Splash Background Image")
             .assertExists()
 
         // Get Started butonunun varlığını kontrol et

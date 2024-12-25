@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RentAndRoam</string>
+    <string name="onboard_description1">"İhtiyaçlarınıza uygun geniş bir emlak yelpazesini keşfedin. İster kiralayın ister satın alın, yaşam tarzınıza mükemmel şekilde uyan evi bulmanıza yardımcı olacağız."</string>
+    <string name="onboard_description2">"İstediğiniz konumdaki mülkleri interaktif harita özelliğimizle kolayca keşfedin. Filtreleme seçeneklerini kullanın, mülk detaylarını görüntüleyin ve sizin için mükemmel mahalleyi seçin."</string>
+    <string name="onboard_description3">"Mülkleri yerinde görmek için kolayca rehberli turlar planlayın. Sorunsuz rezervasyon sürecimiz, potansiyel yeni evinizi daha yakından görmenizi sağlar."</string>
+    <string name="onboard_skip_all">"Atla"</string>
+    <string name="onboard_back">"Geri"</string>
+    <string name="onboard_finish">"Tamamla"</string>
+    <string name="onboard_forward">"İleri"</string>
+    <string name="onboard_title1_part1">Bugün Bizimle </string>
+    <string name="onboard_title1_part2">Mükemmel Evinizi </string>
+    <string name="onboard_title1_part3">Bulun</string>
+    <string name="onboard_title2_part1">Haritayı Kullanarak </string>
+    <string name="onboard_title2_part2">Emlakları Keşfedin</string>
+    <string name="onboard_title3_part1">Emlakları Görüntülemek </string>
+    <string name="onboard_title3_part2">İçin Turlar Düzenleyin</string>
+    <string name="splash_get_started">"Başla"</string>
+    <string name="splash_background_image_desc">Giriş Arka Plan Resmi</string>
+    <string name="splash_logo_image_desc">Giriş Logosu Resmi</string>
+</resources>

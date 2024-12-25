@@ -56,5 +56,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.accompanist.pager) // En son sürümü kullanın
+    implementation(libs.accompanist.pager.indicators) // En son sürümü kullanın
 
 }

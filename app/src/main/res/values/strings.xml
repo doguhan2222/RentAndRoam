@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">RentAndRoam</string>
+    <string name="onboard_description1">"Discover a wide range of properties tailored to your needs. Whether you're renting or buying, we'll help you find the home that perfectly matches your lifestyle."</string>
+    <string name="onboard_description2">"Easily explore properties in your desired location with our interactive map feature. Filter options, view property details, and choose the perfect neighborhood for you."</string>
+    <string name="onboard_description3">"Schedule guided tours with ease to experience properties in person. Our seamless booking process ensures you get a closer look at your potential new home."</string>
+    <string name="onboard_skip_all">"Skip"</string>
+    <string name="onboard_back">"Back"</string>
+    <string name="onboard_finish">"Finish"</string>
+    <string name="onboard_forward">"Forward"</string>
+    <string name="onboard_title1_part1">Find </string>
+    <string name="onboard_title1_part2">Your Perfect Home </string>
+    <string name="onboard_title1_part3">with Us Today</string>
+    <string name="onboard_title2_part1">Discover Properties Using </string>
+    <string name="onboard_title2_part2">The Map</string>
+    <string name="onboard_title3_part1">Arrange Tours </string>
+    <string name="onboard_title3_part2">to View Properties</string>
+    <string name="splash_get_started">"Get Started"</string>
+    <string name="splash_background_image_desc">Splash Background Image</string>
+    <string name="splash_logo_image_desc">Splash Logo Image</string>
 </resources>

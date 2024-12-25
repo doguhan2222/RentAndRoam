@@ -1,15 +1,13 @@
-package com.sedogapps.rentandroam.presentation.features
+package com.sedogapps.rentandroam.presentation.features.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -17,19 +15,20 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sedogapps.rentandroam.R
+import com.sedogapps.rentandroam.presentation.utils.ScreenDimensions
 
 
 @Composable
@@ -37,52 +36,48 @@ fun SplashScreen(
     name: String,
     modifier: Modifier = Modifier
 ) {
-    val configuration =
-        LocalConfiguration.current
-    val screenWidth =
-        configuration.screenWidthDp // Ekranın genişliği
-    val screenHeight =
-        configuration.screenHeightDp // Ekranın yüksekliği
+    val screenWidth = ScreenDimensions.screenWidth.current
+    val screenHeight = ScreenDimensions.screenHeight.current
 
     Column(
-        modifier = Modifier.fillMaxSize(), // Kolonun ekranın tamamını kaplamasını sağlıyoruz
-        horizontalAlignment = Alignment.CenterHorizontally, // Column içinde tüm öğeleri yatayda ortala\
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(
-            (screenHeight * 0.075).dp
+            (screenHeight.value * 0.075).dp
         )
     ) {
         Image(
             painter = painterResource(
-                id = R.drawable.getstartedbackground
+                id = R.drawable.splash_background
             ),
-            contentDescription = "Example PNG Image",
+            contentDescription = stringResource(id = R.string.splash_background_image_desc),
             contentScale = ContentScale.FillWidth,
 
             modifier = Modifier
                 .width(
-                    (screenWidth).dp
-                ) // Ekran genişliğinin %100'ü
+                    (screenWidth.value).dp
+                )
                 .height(
-                    (screenHeight * 0.58).dp
-                ) // Ekran yüksekliğinin %58'i
+                    (screenHeight.value * 0.45).dp
+                )
         )
         Image(
             painter = painterResource(
-                id = R.drawable.resimtest2
+                id = R.drawable.splash_logo
             ),
-            contentDescription = "Example PNG Image2",
+            contentDescription = stringResource(id = R.string.splash_logo_image_desc),
             contentScale = ContentScale.FillWidth,
             modifier = Modifier
                 .width(
-                    (screenWidth * 0.6).dp
-                ) // Ekran genişliğinin %60'ı
+                    (screenWidth.value * 0.6).dp
+                )
                 .height(
-                    (screenHeight * 0.1).dp
-                ) // Ekran yüksekliğinin %30'u
+                    (screenHeight.value * 0.25).dp
+                )
 
         )
         RoundedButton(
-            text = "Get Started",
+            text = stringResource(id = R.string.splash_get_started),
             onClick = { /* Butona tıklandığında yapılacak işlemler */ }
         )
     }
@@ -96,12 +91,8 @@ fun RoundedButton(
 ) {
 
 
-    val configuration =
-        LocalConfiguration.current
-    val screenWidth =
-        configuration.screenWidthDp // Ekranın genişliği
-    val screenHeight =
-        configuration.screenHeightDp // Ekranın yüksekliği
+    val screenWidth = ScreenDimensions.screenWidth.current
+    val screenHeight = ScreenDimensions.screenHeight.current
 
 
 
@@ -109,28 +100,28 @@ fun RoundedButton(
         onClick = onClick,
         modifier = Modifier
             .padding(
-                25.dp,
+                dimensionResource(R.dimen.splash_button_padding),
                 0.dp,
-                25.dp,
+                dimensionResource(R.dimen.splash_button_padding),
                 0.dp
             )
-            .fillMaxWidth().semantics { contentDescription = text }, // Butonun genişliğini ekranın tamamına yayalım
+            .fillMaxWidth().semantics { contentDescription = text },
         colors = ButtonDefaults.buttonColors(
-            containerColor = MaterialTheme.colorScheme.primary, // Temadan alınan arka plan rengi
-            contentColor = MaterialTheme.colorScheme.onPrimary // Temadan alınan metin rengi
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary
         ),
         shape = RoundedCornerShape(
-            60.dp
-        ), // Köşeleri yuvarlayalım
+            dimensionResource(R.dimen.splash_button_corner_radius)
+        ),
         contentPadding = PaddingValues(
-            16.dp
-        ) // İçeriğe biraz boşluk ekleyelim
+            dimensionResource(R.dimen.splash_content_padding),
+        )
     ) {
         Text(
-            text = text, // Butonun yazısını alıyoruz
-            color = Color.White, // Yazı rengini beyaz yapıyoruz
-            fontSize = (screenWidth * 0.05).sp,
-            style = MaterialTheme.typography.bodyLarge // Buton yazı tipini ayarlıyoruz
+            text = text,
+            color = Color.White,
+            fontSize = (screenWidth.value * 0.05).sp,
+            style = MaterialTheme.typography.bodyLarge
         )
     }
 }

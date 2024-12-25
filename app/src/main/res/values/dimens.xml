@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_button_padding">25dp</dimen>
+    <dimen name="splash_content_padding">25dp</dimen>
+    <dimen name="splash_button_corner_radius">60dp</dimen>
+    <dimen name="onboard_column_padding">16dp</dimen>
+    <dimen name="onboard_horizontalpager_padding">16dp</dimen>
+    <dimen name="onboard_row_padding_top">16dp</dimen>
+    <dimen name="onboard_row_padding_bottom">40dp</dimen>
+    <dimen name="onboard_spacer_height">16dp</dimen>
+
+</resources>
