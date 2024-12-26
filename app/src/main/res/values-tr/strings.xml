@@ -7,14 +7,14 @@
     <string name="onboard_back">"Geri"</string>
     <string name="onboard_finish">"Tamamla"</string>
     <string name="onboard_forward">"İleri"</string>
-    <string name="onboard_title1_part1">Bugün Bizimle </string>
-    <string name="onboard_title1_part2">Mükemmel Evinizi </string>
-    <string name="onboard_title1_part3">Bulun</string>
-    <string name="onboard_title2_part1">Haritayı Kullanarak </string>
-    <string name="onboard_title2_part2">Emlakları Keşfedin</string>
-    <string name="onboard_title3_part1">Emlakları Görüntülemek </string>
-    <string name="onboard_title3_part2">İçin Turlar Düzenleyin</string>
+    <string name="onboard_title1_part1">"Bugün Bizimle "</string>
+    <string name="onboard_title1_part2">"Mükemmel Evinizi "</string>
+    <string name="onboard_title1_part3">"Bulun"</string>
+    <string name="onboard_title2_part1">"Haritayı Kullanarak "</string>
+    <string name="onboard_title2_part2">"Emlakları Keşfedin"</string>
+    <string name="onboard_title3_part1">"Emlakları Görüntülemek "</string>
+    <string name="onboard_title3_part2">"İçin Turlar Düzenleyin"</string>
     <string name="splash_get_started">"Başla"</string>
-    <string name="splash_background_image_desc">Giriş Arka Plan Resmi</string>
-    <string name="splash_logo_image_desc">Giriş Logosu Resmi</string>
+    <string name="splash_background_image_desc">"Giriş Arka Plan Resmi"</string>
+    <string name="splash_logo_image_desc">"Giriş Logosu Resmi"</string>
 </resources>

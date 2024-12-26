@@ -97,10 +97,16 @@ fun OnboardingScreen() {
             imageDark = R.drawable.onboard3_dark,
             title = buildAnnotatedString {
                 withStyle(style = SpanStyle(color = Color.Blue)) {
-                    stringResource(R.string.onboard_title3_part1)
+                    append(
+                        stringResource(R.string.onboard_title3_part1)
+                    )
+
                 }
                 withStyle(style = SpanStyle()) {
-                    stringResource(R.string.onboard_title3_part2)
+                    append(
+                        stringResource(R.string.onboard_title3_part2)
+                    )
+
                 }
             },
             description = stringResource(R.string.onboard_description3)
