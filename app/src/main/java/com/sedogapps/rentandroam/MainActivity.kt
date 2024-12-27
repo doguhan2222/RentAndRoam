@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                         ScreenDimensions.screenHeight provides screenHeight
                     ) {
 
-                        OnboardingScreen()
+                        SplashScreen( )
                     }
                 }
             }
@@ -53,6 +53,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     RentAndRoamTheme {
-        SplashScreen("Android")
+        SplashScreen()
     }
 }

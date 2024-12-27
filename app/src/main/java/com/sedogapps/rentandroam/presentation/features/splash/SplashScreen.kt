@@ -33,8 +33,7 @@ import com.sedogapps.rentandroam.presentation.utils.ScreenDimensions
 
 @Composable
 fun SplashScreen(
-    name: String,
-    modifier: Modifier = Modifier
+
 ) {
     val screenWidth = ScreenDimensions.screenWidth.current
     val screenHeight = ScreenDimensions.screenHeight.current
