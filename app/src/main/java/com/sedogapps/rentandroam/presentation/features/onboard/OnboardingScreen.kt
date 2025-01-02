@@ -49,7 +49,9 @@ import com.sedogapps.rentandroam.presentation.utils.ScreenDimensions
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun OnboardingScreen() {
+fun OnboardingScreen(
+    onNavigateToLogin:() -> Unit
+) {
     val pagerState = rememberPagerState()
     val scope = rememberCoroutineScope()
 
@@ -121,7 +123,7 @@ fun OnboardingScreen() {
         if (pagerState.currentPage < items.size - 1) {
             TextButton(
                 onClick = {
-                    // Son sayfada yapılacak işlem (Örn: Ana sayfaya yönlendirme)
+                    onNavigateToLogin()
                 },
                 modifier = Modifier.align(Alignment.End)
             ) {
@@ -175,7 +177,8 @@ fun OnboardingScreen() {
                             pagerState.animateScrollToPage(pagerState.currentPage + 1)
                         }
                     } else {
-                        // Son sayfada yapılacak işlem (Örn: Ana sayfaya yönlendirme)
+                        onNavigateToLogin()
+
                     }
                 },
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Blue)

@@ -16,5 +16,10 @@
     <string name="onboard_title3_part2">"İçin Turlar Düzenleyin"</string>
     <string name="splash_get_started">"Başla"</string>
     <string name="splash_background_image_desc">"Giriş Arka Plan Resmi"</string>
-    <string name="splash_logo_image_desc">"Giriş Logosu Resmi"</string>
+    <string name="logo_image_desc">" Logo Resmi"</string>
+    <string name="login_sigin">"Giriş Yap"</string>
+    <string name="login_username">"Kullanıcı Adı"</string>
+    <string name="login_password">"Şifre"</string>
+    <string name="login_continue_with">"Ya da bunlarla giriş yapın"</string>
+
 </resources>

@@ -5,16 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.sedogapps.rentandroam.presentation.features.onboard.OnboardingScreen
-import com.sedogapps.rentandroam.presentation.features.splash.SplashScreen
+import androidx.navigation.compose.rememberNavController
+import com.sedogapps.rentandroam.presentation.navigation.NavGraph
 import com.sedogapps.rentandroam.presentation.utils.ScreenDimensions
 import com.sedogapps.rentandroam.ui.theme.RentAndRoamTheme
 
@@ -25,21 +22,24 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RentAndRoamTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    /*SplashScreen(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )*/
+                Scaffold(
+                    modifier = Modifier.fillMaxSize()
+                ) { innerPadding ->
+
+                    // Ekran boyutlarını hesapla ve paylaş
                     val configuration = LocalConfiguration.current
                     val screenWidth = configuration.screenWidthDp.dp
                     val screenHeight = configuration.screenHeightDp.dp
 
-                    CompositionLocalProvider(// share screen dimensions to all
+                    CompositionLocalProvider(
                         ScreenDimensions.screenWidth provides screenWidth,
                         ScreenDimensions.screenHeight provides screenHeight
                     ) {
+                        // Navigation Controller tanımla
+                        val navController = rememberNavController()
 
-                        SplashScreen( )
+                        // NavGraph'i çalıştır
+                        NavGraph(navController = navController)
                     }
                 }
             }
@@ -48,11 +48,11 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
+/*
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     RentAndRoamTheme {
         SplashScreen()
     }
-}
+}*/

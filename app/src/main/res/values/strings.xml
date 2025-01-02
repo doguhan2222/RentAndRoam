@@ -16,5 +16,10 @@
     <string name="onboard_title3_part2">to View Properties"</string>
     <string name="splash_get_started">"Get Started"</string>
     <string name="splash_background_image_desc">"Splash Background Image"</string>
-    <string name="splash_logo_image_desc">"Splash Logo Image"</string>
+    <string name="logo_image_desc">"Logo Image"</string>
+    <string name="login_sigin">"Sig In"</string>
+    <string name="login_username">"Username"</string>
+    <string name="login_password">"Password"</string>
+    <string name="login_continue_with">"Or continue with"</string>
+
 </resources>

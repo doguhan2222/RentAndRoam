@@ -8,5 +8,7 @@
     <dimen name="onboard_row_padding_top">16dp</dimen>
     <dimen name="onboard_row_padding_bottom">40dp</dimen>
     <dimen name="onboard_spacer_height">16dp</dimen>
+    <dimen name="login_spacer_height">16dp</dimen>
+    <dimen name="login_content_padding">25dp</dimen>
 
 </resources>
